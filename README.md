@@ -24,9 +24,10 @@ This project implements a video upload and streaming server using Docker, Nginx 
 └── videos/              # Directory where videos are stored
 └── video.mp4            # Example video
 ```
+
 ## Requirements
 
-- **Docker** e **Docker Compose** installed in the system.
+-   **Docker** e **Docker Compose** installed in the system.
 
 ## How to Use
 
@@ -44,8 +45,9 @@ docker-compose up --build
 ```
 
 This will create two containers:
-- **nginx-rtmp**: Nginx server with RTMP support, responsible for streaming and serving videos via HTTP.
-- **node-upload**: Bun service that handles video uploads.
+
+-   **nginx-rtmp**: Nginx server with RTMP support, responsible for streaming and serving videos via HTTP.
+-   **node-upload**: Bun service that handles video uploads.
 
 ### Step 3: Access the upload server
 
@@ -71,11 +73,10 @@ Upload a video via the upload form in the `/upload` route. The video will be sav
 
 ## Technologies Used
 
-- **Nginx**: Used for video streaming and RTMP.
-- **Bun**: Used for managing the upload service (alternative to Node.js).
-- **Docker**: For containerization of services.
+-   **Nginx**: Used for video streaming and RTMP.
+-   **Bun**: Used for managing the upload service (alternative to Node.js).
+-   **Docker**: For containerization of services.
 
 ## License
 
 [MIT](LICENSE)
-```
