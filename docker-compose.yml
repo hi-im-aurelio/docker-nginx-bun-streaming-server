@@ -1,0 +1,22 @@
+version: "3"
+services:
+    nginx-rtmp:
+        image: tiangolo/nginx-rtmp
+        ports:
+            - "8080:8080"
+            - "1935:1935"
+        volumes:
+            - ./videos:/var/www/videos
+            - ./nginx.conf:/etc/nginx/nginx.conf
+
+    node-upload:
+        build:
+            context: ./node_upload_service
+            dockerfile: Dockerfile
+        working_dir: /app
+        volumes:
+            - ./videos:/var/www/videos
+        ports:
+            - "5000:5000"
+        environment:
+            NODE_ENV: production
