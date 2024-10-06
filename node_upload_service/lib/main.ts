@@ -3,11 +3,18 @@ import fileUpload from "express-fileupload";
 import path from "node:path";
 import fs from "node:fs";
 import Morgans from "./utils/morgans_util";
+import cors from "cors";
 
 const app = express();
 app.use(Morgans.big_news);
 app.use(fileUpload());
 app.use(json());
+
+app.use(
+    cors({
+        origin: "*",
+    }),
+);
 
 const upload_path = "/var/www/videos";
 
@@ -35,6 +42,7 @@ app.post("/upload", (req: any, res: any) => {
 
     video_file.mv(upload_file_path, (err: any) => {
         if (err) {
+            console.error(`Err: ${err}`);
             return res.status(500).json({ message: "failed to move the file" });
         }
 
