@@ -1,23 +1,23 @@
 {
-  "name": "node-upload",
-  "module": "lib/main.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/express-fileupload": "^1.5.1"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "start": "bun run lib/main.ts",
-    "test": "bun test"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.0",
-    "express-fileupload": "^1.5.1"
-  }
+    "name": "node-upload",
+    "module": "lib/main.ts",
+    "type": "module",
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
+        "@types/express-fileupload": "^1.5.1"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "scripts": {
+        "start": "bun run lib/main.ts",
+        "dev": "bun run --watch lib/main.ts"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.0",
+        "express-fileupload": "^1.5.1"
+    }
 }
